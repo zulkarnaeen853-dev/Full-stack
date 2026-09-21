@@ -3,13 +3,11 @@ const router = express.Router();
 
 // 1. FIXED: Corrected comment syntax & imported your modular Multer config
 
-// controllers
-const DataController = require('../../Controller/DataController');
-const UpdateController = require('../../Controller/UpdateController');
-const DeleteController = require('../../Controller/DeleteController');
-
+const { DataController, RegisterController, UpdateController, DeleteController } = require('../../Controller/Test');
+const RegisterMiddleware = require('../../Middleware/RegisterMiddleware');
 
 router.get('/Data', DataController);
+router.post('/Register', RegisterMiddleware, RegisterController);
 router.delete('/delete/:id', DeleteController);
 router.post('/update/:id', UpdateController);
 

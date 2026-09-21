@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 
-const AuthenticationRoute = require('./API/AuthenticationData');
+const AuthenticationRoute = require('./API/AuthenticationRoute');
 
 
 const api = process.env.BASE_URL || `/api/v1`;
