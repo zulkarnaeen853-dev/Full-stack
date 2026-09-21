@@ -29,4 +29,4 @@ const RegisterMiddleware = (req, res, next)=>{
 
 }
 
-module.exports = RegisterMiddleware;
+module.exports = {RegisterMiddleware};
