@@ -29,9 +29,12 @@ const RegisterController = async (req, res) => {
     }
 };
 
-const LoginController = async (req, res) => {
+const LoginController = (req, res) => {
 
-
+res.send({
+        success: true,
+        message: 'Login successful'
+    });
 
 }
 
