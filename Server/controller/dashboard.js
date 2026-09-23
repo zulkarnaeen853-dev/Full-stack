@@ -1,3 +1,5 @@
+const registerFormat = require('../model/RegisterModel');
+
 const UpdateController = async (req, res) => {
     try {
         const userId = req.params.id;

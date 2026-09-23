@@ -1,3 +1,5 @@
+const registerFormat = require('../model/RegisterModel');
+
 const RegisterController = async (req, res) => {
     try {
         const name = req.body.name;

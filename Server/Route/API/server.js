@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 
 
-const AuthenticationRoute = require('./API/AuthenticationRoute');
-const DashboardRoute = require('./API/DashboardRoute');
-const Test = require('./API/Test');
+const AuthenticationRoute = require('../api/authentication');
+const DashboardRoute = require('./dashboard');
+const Test= require('./test');
 
 
-router.use('/authenticationRoute', AuthenticationRoute);
-router.use('/DashboardRoute', DashboardRoute);
+router.use('/authentication', AuthenticationRoute);
+router.use('/dashboard', DashboardRoute);
 router.use('/test', Test);
 
 module.exports = router;

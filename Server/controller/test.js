@@ -1,4 +1,4 @@
-const registerFormat = require('../Model/RegisterModel');
+const registerFormat = require('../model/RegisterModel');
 
 const DataController = async (req, res) => {
     try {

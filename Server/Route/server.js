@@ -5,7 +5,7 @@ const router = express.Router();
 
 const api = process.env.BASE_URL || `/api/v1`;
 
-const API = require('./API/server');
+const API = require('./api/server');
 
 router.use(api, API);
 

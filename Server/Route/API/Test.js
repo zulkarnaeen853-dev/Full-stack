@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { DataController } = require('../../Controller/TestController');
+const { DataController } = require('../../controller/test');
 
 router.get('/Data', DataController);
 

@@ -25,7 +25,7 @@ function App() {
 
   const readDataFromServer = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/Data");
+      const response = await axios.get("http://localhost:3000/api/v1/test/Data");
       if (response.data.success) {
         setUsersList(response.data.usersData); 
       }
@@ -43,7 +43,7 @@ function App() {
     try {
       if (editUserId) {
         // 1. Send the updated info to your backend server
-        const response = await axios.post(`http://localhost:3000/update/${editUserId}`, {
+        const response = await axios.post(`http://localhost:3000/api/v1/dashboard/update/${editUserId}`, {
           name: FormData.name,
           email: FormData.email,
           password: FormData.password,
@@ -63,7 +63,7 @@ function App() {
         setEditUserId(null); // Exit edit mode
       } else {
         // Create new user registration
-        await axios.post("http://localhost:3000/Register", {
+        await axios.post("http://localhost:3000/api/v1/authentication/register", {
           name: FormData.name,
           email: FormData.email,
           password: FormData.password,
@@ -80,7 +80,7 @@ function App() {
 
   const handelDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/delete/${id}`);
+      await axios.delete(`http://localhost:3000/api/v1/dashboard/delete/${id}`);
       if (id === editUserId) cancelEdit();
       readDataFromServer();
     } catch (err) {
